@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/weather-svgrepo-com.svg " class="weather-svg" width="100px"/>
+
+      <div class="header-title"><h1>Weather App</h1></div>
+
+      <div class="search">
+        <form action="#">
+           <button>
+            <img src="./assets/search-svgrepo-com.svg " class="search-svg" height="32px"/>
+          </button>
+          <input type="text" placeholder="Search cities" name="search" />
+        </form>
+      </div>
+
+      <label class="switch">
+        <input type="checkbox" switch />
+        <span class="slider round">
+          <div>
+            <span>C</span>
+            <span>F</span>
+          </div>
+        </span>
+      </label>
+      
+    </header>
+
+    <main><div class="search-result"></div>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
