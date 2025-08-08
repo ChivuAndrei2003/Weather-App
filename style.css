@@ -29,26 +29,37 @@ html {
 
 header {
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
   align-items: center;
-  justify-items: center;
-  margin-top: 0;
-  border-top: 0;
-  margin-bottom: 0;
-  border-bottom: 0;
-  padding: 0;
+  justify-content: space-between; /* spread logo, title, search, switch */
+  gap: 16px;
+  flex-wrap: nowrap; /* keep on one line */
+  padding: 8px 16px;
+  margin: 0;
+  border: 0;
+}
+
+header h1 {
+  margin: 0; /* avoid pushing header height */
 }
 
 .search {
-  flex-grow: 1;
+  flex: 1 1 auto; /* allow search to grow/shrink */
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* push form to the right */
   align-items: center;
-  /* background-color: green; */
-  padding: 10px;
+  min-width: 200px;
 }
 
-.search input[type="text"] {
+.search form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.search-input {
   padding: 6px;
   margin-right: 10px;
   border: none;
@@ -73,7 +84,7 @@ header {
   color: white;
 }
 .switch {
-  margin-top: 2;
+  margin-top: 0; /* fix invalid unitless value */
   position: relative;
   display: inline-block;
   width: 60px;

@@ -8,16 +8,24 @@
   </head>
   <body>
     <header>
-      <img src="./assets/weather-svgrepo-com.svg " class="weather-svg" width="100px"/>
+      <img
+        src="./assets/weather-svgrepo-com.svg "
+        class="weather-svg"
+        width="100px"
+      />
 
       <div class="header-title"><h1>Weather App</h1></div>
 
       <div class="search">
         <form action="#">
-           <button>
-            <img src="./assets/search-svgrepo-com.svg " class="search-svg" height="32px"/>
+          <button class="search-loop">
+            <img
+              src="./assets/search-svgrepo-com.svg "
+              class="search-svg"
+              height="32px"
+            />
           </button>
-          <input type="text" placeholder="Search cities" name="search" />
+          <input type="text" placeholder="Search cities" class="search-input" />
         </form>
       </div>
 
@@ -30,10 +38,16 @@
           </div>
         </span>
       </label>
-      
     </header>
 
-    <main><div class="search-result"></div>
+    <main>
+      <div class="search-result">
+        <h3 id="city"></h3>
+        <p id="temperature"></p>
+        <p id="feels-like"></p>
+        <p id="humidity"></p>
+        <p id="wind"></p>
+      </div>
     </main>
     <script src="main.js" type="module"></script>
   </body>
