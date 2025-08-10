@@ -109,7 +109,7 @@ main{
   margin-top: -40px;
 }
 
-/* ====== Card “Liquid Glass” ====== */
+/* ====== Card "Liquid Glass" ====== */
 .search-result{
   width: min(600px, calc(100% - 32px));
   height: calc(100% - 32px);
@@ -121,6 +121,45 @@ main{
   backdrop-filter: blur(var(--blur)) saturate(160%);
   -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
   box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.5);
+  
+  /*  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  text-align: center;
+  
+  /* hide the card initially */
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+/* when the card is visibile */
+.search-result.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Styles for card's elements */
+.search-result h3 {
+  margin: 8px 0;
+  font-size: clamp(20px, 3vw, 24px);
+  color: var(--text);
+}
+
+.search-result p {
+  margin: 4px 0;
+  font-size: clamp(14px, 2.5vw, 16px);
+  color: var(--muted);
+}
+
+.search-result img {
+  margin-bottom: 16px;
 }
 
 /*  */

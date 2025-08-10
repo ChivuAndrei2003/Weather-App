@@ -1,13 +1,15 @@
-import { TEMP, switchBtn } from "./dom.js";
-
+import { Temperature } from "./apiRequest.js";
 
 export function convertTemp(tempUnit, tempValue) {
-    
-    if (tempUnit === "fahrenheit") {
-       return tempValue = (tempValue * 9 / 5) + 32;
-       
-    } else {
-       return tempValue = (tempValue - 32) * 5 / 9;
-    }
-    
+  let temperatureConverted;
+
+  if (tempUnit === "fahrenheit") {
+    temperatureConverted = (tempValue * 9) / 5 + 32;
+    Temperature.textContent = `Temperature: ${temperatureConverted.toFixed(1)} °F`;
+  } else {
+    temperatureConverted = ((tempValue - 32) * 5) / 9;
+    Temperature.textContent = `Temperature: ${temperatureConverted.toFixed(1)} °C`;
+  }
 }
+
+
