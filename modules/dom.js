@@ -2,15 +2,15 @@ import { convertTemp } from "./tempConvert.js";
 import { showWeather } from "./apiRequest.js";
 export const switchBtn = document.getElementById("switch-temp");
 
-let temp = "celsius";
+export let TEMP = "celsius";
 
 switchBtn.addEventListener("click", () => {
   // alert("switch clicked");
   let currentTemp =
-    temp === "celsius" ? (temp = "fahrenheit") : (temp = "celsius");
+    TEMP === "celsius" ? (TEMP = "fahrenheit") : (TEMP = "celsius");
   convertTemp(currentTemp , );
 });
-const form = document.querySelector("form");
+export const form = document.querySelector("form");
 export const searchInput = document.getElementById("search-input");
 
 
@@ -22,3 +22,4 @@ export function handleSearch(e) {
 }
 
 form.addEventListener("submit", handleSearch);
+
