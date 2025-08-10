@@ -1,12 +1,10 @@
-export function convertTemp(value) {
+export function convertTemp(tempUnit , tempValue) {
     
-    let tempConvertValue;
-
-    if (value == "fahrenheit") {
-        tempConvertValue = (value * 9 / 5) + 32;
+    if (tempUnit === "fahrenheit") {
+        tempValue = (tempValue * 9 / 5) + 32;
        
     } else {
-       tempConvertValue = (value - 32) * 5 / 9;
+       tempValue = (tempValue - 32) * 5 / 9;
     }
-    
+    return tempConvertValue;
 }
