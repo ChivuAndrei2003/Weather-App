@@ -121,7 +121,6 @@ https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timel
 ### API Parameters
 - `unitGroup=metric` - Returns data in metric units
 - `elements=name,temp,feelslike,humidity,windspeed,icon` - Specifies data fields
-- `key=XVSBD3GNB2ZMDGLTDDA9ACY92` - API key
 - `contentType=json` - Response format
 
 ### Weather Icons
