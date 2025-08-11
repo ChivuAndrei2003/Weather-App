@@ -6,7 +6,7 @@ const Humidity = document.getElementById("humidity");
 const Wind = document.getElementById("wind");
 const searchResultCard = document.querySelector(".search-result");
 
-
+// this is for getting svg's (online ) for our search result card
 const ICON_BASE =
   "https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/SVG/1st%20Set%20-%20Color";
 const iconUrl = (id) => `${ICON_BASE}/${id}.svg`; // ex: clear-day.svg, rain.svg
